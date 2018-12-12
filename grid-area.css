@@ -1,0 +1,43 @@
+body {
+	display: grid;
+	grid-template-columns: 1fr 4fr 1fr;
+	grid-template-columns: 1fr 100px 300px 100px 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr;
+	grid-template-rows: auto auto auto auto;
+	grid-column-gap: 5px;
+	grid-row-gap: 10px;
+	grid-template-areas:
+		". header header header ."
+		". nav nav nav ."
+		". side-left main side-right ."
+		". footer footer footer .";
+}
+
+body * {
+	border: 1px solid red;
+	padding: 10px;
+}
+
+header {
+	grid-area: header;
+}
+
+nav {
+	grid-area: nav;
+}
+
+aside.left {
+	grid-area: side-left;
+}
+
+aside.right {
+	grid-area: side-right;
+}
+
+main {
+	grid-area: main;
+}
+
+footer {
+	grid-area: footer;
+}
